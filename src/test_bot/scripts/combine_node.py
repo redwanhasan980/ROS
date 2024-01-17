@@ -4,15 +4,10 @@ from turtlesim.msg import Pose
 from geometry_msgs.msg import Twist
 def pose_call(msg:Pose):
     cmd = Twist()
-    if msg.x>=11 or msg.x<=0.5 or msg.y>=11 or msg.y<=0.5 :
-        cmd.linear.x=0
-        cmd.angular.z=1.5 
-        pub.publish(cmd)
-        rospy.sleep(2)
-        cmd.linear.x=2
-        cmd.angular.z=0 
-        pub.publish(cmd)
-        rospy.sleep(2)
+    if msg.x>=10 or msg.x<=1 or msg.y>=10 or msg.y<=1 :
+        cmd.linear.x=3
+        cmd.angular.z=4
+        
        
     else:
         cmd.angular.z=0
