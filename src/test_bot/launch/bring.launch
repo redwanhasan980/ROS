@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<launch>
+    <arg name="name" default="turtle"/>
+    <arg name="key" default="key"/>
+    <arg name="vel" default="vel"/>
+    
+    
+
+    <node pkg="turtlesim" type="turtlesim_node" name="$(arg name)">
+        <remap from="/turtle1/cmd_vel" to="$(arg vel)"/>
+    </node>
+    <node pkg="turtlesim" type="turtle_teleop_key" name="$(arg key)" output="screen">
+        
+    </node>
+
+</launch>

@@ -1,0 +1,42 @@
+<?xml version="1.0" ?>
+<robot name="robot_arm" xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+   <xacro:include filename="$(find simbot)/urdf/links.xacro"/>
+    <xacro:include filename="$(find simbot)/urdf/properties.xacro"/>
+    <link name="base_link">
+    
+   
+        <visual>
+            <origin rpy="0 0 0" xyz="0 0 0"/>
+            <geometry>
+        
+                <box size="3 5 1"/>
+            </geometry>
+        </visual>
+        
+    </link>
+    <!-- joint that connects base_link to ${l1} -->
+    <joint name="base_link__${l1}" type="revolute">
+        <axis xyz="0 0 1" />
+        <limit effort="1000.0" lower="-3.14" upper="3.14" velocity="0.5" />
+        <origin rpy="0 0 0" xyz="0 0 0.5"/>
+        <parent link="base_link"/>
+        <child link="${l1}"/>
+    </joint>
+    
+    <xacro:link name="${l1}" origin_rpy="0 0 0" origin_xyz="0 0 0.2" radius="0.35" lengath="0.4"/>
+
+    
+    
+    <joint name="${l1}__link_02" type="revolute">
+        <axis xyz="0 1 0" />
+        <limit effort="1000.0" lower="-3.14" upper="3.14" velocity="0.5" />
+        <origin rpy="0 0 0" xyz="0 0 0.4"/>
+        <parent link="${l1}"/>
+        <child link="link_02"/>
+    </joint>
+     
+    <xacro:link name="link_02" origin_rpy="0 0 0" origin_xyz="0 0 0.4" radius="0.25" lengath="1.4"/>
+
+    
+</robot>

@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<launch>
+
+    <include file="$(find test_bot)/launch/bring.launch">
+        <arg name="name" value="turtle1"/>
+        <arg name="key" value="kb1"/>
+        <arg name="vel" value="tb1_vel"/>
+        
+        
+    </include>
+    <include file="$(find test_bot)/launch/bring.launch">
+        <arg name="name" value="turtle2"/>
+        <arg name="key" value="kb2"/>
+        <arg name="vel" value="tb2_vel"/>
+        
+    </include>
+    <include file="$(find test_bot)/launch/bring.launch">
+        <arg name="name" value="turtle3"/>
+        <arg name="key" value="kb3"/>
+        
+        <arg name="vel" value="tb3_vel"/>
+    </include>
+    <include file="$(find test_bot)/launch/bring.launch">
+        <arg name="name" value="turtle4"/>
+        <arg name="key" value="kb4"/>
+        
+        <arg name="vel" value="tb4_vel"/>
+    </include>
+
+
+
+</launch>

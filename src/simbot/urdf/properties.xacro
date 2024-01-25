@@ -1,0 +1,7 @@
+<?xml version="1.0" ?>
+<robot name="robot_arm" xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+  <xacro:property name="l1" value="link_01"/>
+  
+    
+</robot>

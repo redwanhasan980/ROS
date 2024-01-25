@@ -1,2 +1,2 @@
-controller:test_bot
+controller:mobile_bot:service_pkg:simbot:test_bot
 -DCATKIN_DEVEL_PREFIX=/home/redwan/catkin_ws/devel -DCMAKE_INSTALL_PREFIX=/home/redwan/catkin_ws/install -G Unix Makefiles

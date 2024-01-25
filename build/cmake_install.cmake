@@ -131,6 +131,9 @@ endif()
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
   include("/home/redwan/catkin_ws/build/gtest/cmake_install.cmake")
+  include("/home/redwan/catkin_ws/build/simbot/cmake_install.cmake")
+  include("/home/redwan/catkin_ws/build/mobile_bot/cmake_install.cmake")
+  include("/home/redwan/catkin_ws/build/service_pkg/cmake_install.cmake")
   include("/home/redwan/catkin_ws/build/controller/cmake_install.cmake")
   include("/home/redwan/catkin_ws/build/test_bot/cmake_install.cmake")
 

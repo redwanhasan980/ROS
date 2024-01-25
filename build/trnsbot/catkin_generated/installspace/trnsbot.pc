@@ -1,0 +1,8 @@
+prefix=/home/redwan/catkin_ws/install
+
+Name: trnsbot
+Description: Description of trnsbot
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 
