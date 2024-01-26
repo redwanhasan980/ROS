@@ -3,6 +3,7 @@
 
 
     <xacro:include filename="$(find mobile_bot)/urdf/robot_core.xacro"/>
+   <xacro:include filename="$(find mobile_bot)/urdf/gazebo_control.xacro"/>
     
 
 </robot>
