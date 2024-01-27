@@ -5,7 +5,7 @@
     <node pkg="robot_state_publisher" type="robot_state_publisher" name="robot_state_publisher_g" />
     <node pkg="joint_state_publisher_gui" type="joint_state_publisher_gui" name="joint_state_publisher_g"/>
      <include file="$(find gazebo_ros)/launch/empty_world.launch">
-      <!--<arg name="world_name" value="$(find turtlebot3_gazebo)/worlds/empty.world"/>-->
+      <arg name="world_name" value="$(find mobile_bot)/worlds/world3.world"/>
       <arg name="paused" value="false"/>
       <arg name="use_sim_time" value="true"/>
       <arg name="gui" value="true"/>
