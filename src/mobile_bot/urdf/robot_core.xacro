@@ -24,7 +24,14 @@
     <link name="base_link">
 
     </link>
+<joint name="base_footprint_joint" type="fixed">
+        <parent link="base_link"/>
+        <child link="base_footprint"/>
+        <origin xyz="0 0 0"/>
+    </joint>
+<link name="base_footprint">
 
+    </link>
 
     <!-- CHASSIS LINK -->
 
@@ -40,7 +47,7 @@
             <geometry>
                 <box size="0.3 0.3 0.15"/>
             </geometry>
-            <material name="white"/>
+            <material name="orange"/>
         </visual>
         <collision>
             <origin xyz="0.15 0 0.075"/>
