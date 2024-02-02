@@ -35,6 +35,14 @@
 /home/redwan/catkin_ws/build/gtest/googletest/CMakeFiles/test.dir
 /home/redwan/catkin_ws/build/gtest/googletest/CMakeFiles/gtest_main.dir
 /home/redwan/catkin_ws/build/gtest/googletest/CMakeFiles/gtest.dir
+/home/redwan/catkin_ws/build/nav_mobile_bot/CMakeFiles/install/strip.dir
+/home/redwan/catkin_ws/build/nav_mobile_bot/CMakeFiles/install/local.dir
+/home/redwan/catkin_ws/build/nav_mobile_bot/CMakeFiles/install.dir
+/home/redwan/catkin_ws/build/nav_mobile_bot/CMakeFiles/list_install_components.dir
+/home/redwan/catkin_ws/build/nav_mobile_bot/CMakeFiles/rebuild_cache.dir
+/home/redwan/catkin_ws/build/nav_mobile_bot/CMakeFiles/edit_cache.dir
+/home/redwan/catkin_ws/build/nav_mobile_bot/CMakeFiles/test.dir
+/home/redwan/catkin_ws/build/nav_mobile_bot/CMakeFiles/_catkin_empty_exported_target.dir
 /home/redwan/catkin_ws/build/simbot/CMakeFiles/install/strip.dir
 /home/redwan/catkin_ws/build/simbot/CMakeFiles/install/local.dir
 /home/redwan/catkin_ws/build/simbot/CMakeFiles/install.dir
@@ -42,7 +50,6 @@
 /home/redwan/catkin_ws/build/simbot/CMakeFiles/rebuild_cache.dir
 /home/redwan/catkin_ws/build/simbot/CMakeFiles/edit_cache.dir
 /home/redwan/catkin_ws/build/simbot/CMakeFiles/test.dir
-/home/redwan/catkin_ws/build/simbot/CMakeFiles/_catkin_empty_exported_target.dir
 /home/redwan/catkin_ws/build/turtlebot3/turtlebot3/CMakeFiles/install/strip.dir
 /home/redwan/catkin_ws/build/turtlebot3/turtlebot3/CMakeFiles/install/local.dir
 /home/redwan/catkin_ws/build/turtlebot3/turtlebot3/CMakeFiles/install.dir

@@ -54,6 +54,7 @@ CMAKE_BINARY_DIR = /home/redwan/catkin_ws/build
 
 # The main recursive "all" target.
 all: gtest/all
+all: nav_mobile_bot/all
 all: simbot/all
 all: turtlebot3/turtlebot3/all
 all: turtlebot3_msgs/all
@@ -76,6 +77,7 @@ all: turtlebot3/turtlebot3_description/all
 
 # The main recursive "preinstall" target.
 preinstall: gtest/preinstall
+preinstall: nav_mobile_bot/preinstall
 preinstall: simbot/preinstall
 preinstall: turtlebot3/turtlebot3/preinstall
 preinstall: turtlebot3_msgs/preinstall
@@ -103,6 +105,7 @@ clean: CMakeFiles/clean_test_results.dir/clean
 clean: CMakeFiles/tests.dir/clean
 clean: CMakeFiles/download_extra_data.dir/clean
 clean: gtest/clean
+clean: nav_mobile_bot/clean
 clean: simbot/clean
 clean: turtlebot3/turtlebot3/clean
 clean: turtlebot3_msgs/clean
@@ -217,6 +220,24 @@ mobile_bot/clean:
 .PHONY : mobile_bot/clean
 
 #=============================================================================
+# Directory level rules for directory nav_mobile_bot
+
+# Recursive "all" directory target.
+nav_mobile_bot/all:
+
+.PHONY : nav_mobile_bot/all
+
+# Recursive "preinstall" directory target.
+nav_mobile_bot/preinstall:
+
+.PHONY : nav_mobile_bot/preinstall
+
+# Recursive "clean" directory target.
+nav_mobile_bot/clean: nav_mobile_bot/CMakeFiles/_catkin_empty_exported_target.dir/clean
+
+.PHONY : nav_mobile_bot/clean
+
+#=============================================================================
 # Directory level rules for directory service_pkg
 
 # Recursive "all" directory target.
@@ -248,7 +269,7 @@ simbot/preinstall:
 .PHONY : simbot/preinstall
 
 # Recursive "clean" directory target.
-simbot/clean: simbot/CMakeFiles/_catkin_empty_exported_target.dir/clean
+simbot/clean:
 
 .PHONY : simbot/clean
 
@@ -880,31 +901,31 @@ gtest/googletest/CMakeFiles/gtest.dir/clean:
 .PHONY : gtest/googletest/CMakeFiles/gtest.dir/clean
 
 #=============================================================================
-# Target rules for target simbot/CMakeFiles/_catkin_empty_exported_target.dir
+# Target rules for target nav_mobile_bot/CMakeFiles/_catkin_empty_exported_target.dir
 
 # All Build rule for target.
-simbot/CMakeFiles/_catkin_empty_exported_target.dir/all:
-	$(MAKE) -f simbot/CMakeFiles/_catkin_empty_exported_target.dir/build.make simbot/CMakeFiles/_catkin_empty_exported_target.dir/depend
-	$(MAKE) -f simbot/CMakeFiles/_catkin_empty_exported_target.dir/build.make simbot/CMakeFiles/_catkin_empty_exported_target.dir/build
+nav_mobile_bot/CMakeFiles/_catkin_empty_exported_target.dir/all:
+	$(MAKE) -f nav_mobile_bot/CMakeFiles/_catkin_empty_exported_target.dir/build.make nav_mobile_bot/CMakeFiles/_catkin_empty_exported_target.dir/depend
+	$(MAKE) -f nav_mobile_bot/CMakeFiles/_catkin_empty_exported_target.dir/build.make nav_mobile_bot/CMakeFiles/_catkin_empty_exported_target.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/redwan/catkin_ws/build/CMakeFiles --progress-num= "Built target _catkin_empty_exported_target"
-.PHONY : simbot/CMakeFiles/_catkin_empty_exported_target.dir/all
+.PHONY : nav_mobile_bot/CMakeFiles/_catkin_empty_exported_target.dir/all
 
 # Build rule for subdir invocation for target.
-simbot/CMakeFiles/_catkin_empty_exported_target.dir/rule: cmake_check_build_system
+nav_mobile_bot/CMakeFiles/_catkin_empty_exported_target.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/redwan/catkin_ws/build/CMakeFiles 0
-	$(MAKE) -f CMakeFiles/Makefile2 simbot/CMakeFiles/_catkin_empty_exported_target.dir/all
+	$(MAKE) -f CMakeFiles/Makefile2 nav_mobile_bot/CMakeFiles/_catkin_empty_exported_target.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/redwan/catkin_ws/build/CMakeFiles 0
-.PHONY : simbot/CMakeFiles/_catkin_empty_exported_target.dir/rule
+.PHONY : nav_mobile_bot/CMakeFiles/_catkin_empty_exported_target.dir/rule
 
 # Convenience name for target.
-_catkin_empty_exported_target: simbot/CMakeFiles/_catkin_empty_exported_target.dir/rule
+_catkin_empty_exported_target: nav_mobile_bot/CMakeFiles/_catkin_empty_exported_target.dir/rule
 
 .PHONY : _catkin_empty_exported_target
 
 # clean rule for target.
-simbot/CMakeFiles/_catkin_empty_exported_target.dir/clean:
-	$(MAKE) -f simbot/CMakeFiles/_catkin_empty_exported_target.dir/build.make simbot/CMakeFiles/_catkin_empty_exported_target.dir/clean
-.PHONY : simbot/CMakeFiles/_catkin_empty_exported_target.dir/clean
+nav_mobile_bot/CMakeFiles/_catkin_empty_exported_target.dir/clean:
+	$(MAKE) -f nav_mobile_bot/CMakeFiles/_catkin_empty_exported_target.dir/build.make nav_mobile_bot/CMakeFiles/_catkin_empty_exported_target.dir/clean
+.PHONY : nav_mobile_bot/CMakeFiles/_catkin_empty_exported_target.dir/clean
 
 #=============================================================================
 # Target rules for target turtlebot3_msgs/CMakeFiles/turtlebot3_msgs_genpy.dir

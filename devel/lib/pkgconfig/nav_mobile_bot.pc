@@ -1,0 +1,8 @@
+prefix=/home/redwan/catkin_ws/devel
+
+Name: nav_mobile_bot
+Description: Description of nav_mobile_bot
+Version: 1.2.6
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

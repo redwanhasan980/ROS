@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="rd_bot_1.0M"  >
-
-
+<xacro:include filename="$(find turtlebot3_description)/urdf/turtlebot3_burger.gazebo.xacro"/>
+    
     <xacro:include filename="$(find mobile_bot)/urdf/robot_core.xacro"/>
    <xacro:include filename="$(find mobile_bot)/urdf/gazebo_control.xacro"/>
     <xacro:include filename="$(find mobile_bot)/urdf/lidar.xacro"/>

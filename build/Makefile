@@ -294,7 +294,7 @@ _catkin_empty_exported_target: cmake_check_build_system
 
 # fast build rule for target.
 _catkin_empty_exported_target/fast:
-	$(MAKE) -f simbot/CMakeFiles/_catkin_empty_exported_target.dir/build.make simbot/CMakeFiles/_catkin_empty_exported_target.dir/build
+	$(MAKE) -f nav_mobile_bot/CMakeFiles/_catkin_empty_exported_target.dir/build.make nav_mobile_bot/CMakeFiles/_catkin_empty_exported_target.dir/build
 .PHONY : _catkin_empty_exported_target/fast
 
 #=============================================================================
