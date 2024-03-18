@@ -5,7 +5,7 @@
 <joint name="camera_joint" type="fixed">
     <parent link="chassis"/>
     <child link="camera_link"/>
-    <origin xyz="0.305 0.0 0.08" rpy="0.0 0.0 0.0"/>
+    <origin xyz="0.305 0.0 0.08" rpy="0.0 0.018 0.0"/>
 </joint>
 <link name="camera_link">
       <visual>
@@ -28,7 +28,7 @@
   <sensor type="camera" name="camera">
   <pose>0 0 0 0 0 0</pose>
       <always_on>true</always_on>
-      <visualize>true</visualize>
+      <visualize>false</visualize>
       <updateRate>10</updateRate>
       <camera>
           <horizontal_fov>1.089</horizontal_fov>

@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<launch>
+  <param name="robot_description" command="xacro '$(find arm_bot)/urdf/armBot.urdf.xacro'"/>
+ 
+    <!-- <node pkg="robot_state_publisher" type="robot_state_publisher" name="robot_state_publisher_g" />
+    <node pkg="joint_state_publisher_gui" type="joint_state_publisher_gui" name="joint_state_publisher_g"/> -->
+     <include file="$(find gazebo_ros)/launch/empty_world.launch">
+      <!-- <arg name="world_name" value="$(find mobile_bot)/worlds/test_world1.world"/> -->
+      <arg name="paused" value="true"/>
+      <arg name="use_sim_time" value="true"/>
+      <arg name="gui" value="true"/>
+      <arg name="headless" value="false"/>
+      <arg name="debug" value="false"/>
+      
+     </include>
+    <node name="spawining_urdf" pkg="gazebo_ros" type="spawn_model" output="screen" args="-urdf -model arm_bot -param robot_description">
+    
+    </node>
+  
+</launch>

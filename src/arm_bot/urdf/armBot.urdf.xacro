@@ -1,0 +1,61 @@
+<?xml version="1.0"?>
+<robot name="arm_bot" xmlns:xacro="http://www.ros.org/wiki/xacro">
+ <xacro:include filename="$(find arm_bot)/urdf/joint_link.xacro"/>
+ <link name="root">
+    
+ </link>
+<xacro:link_cylinder name="base_link" origin_xyz="0.0 0.0 0.025" rpy="0.0 0.0 0.0" radius="0.1" length="0.05" mass="1" ixx="0.01625" ixy="0" ixz="0" 
+                            iyy="0.01625" iyz="0" izz="0.005" />
+<joint name="root_base" type="fixed">
+        <parent link="root"/>
+        <child link="base_link"/>
+        <origin xyz="0 0 0"/>
+    </joint>
+<xacro:link_cylinder name="link1" origin_xyz="0.0 0.0 0.132" rpy="0.0 0.0 0.0" radius="0.05" length="0.264" mass="1.5" ixx="0.054147" ixy="0" ixz="0" 
+                            iyy="0.054147" iyz="0" izz="0.001875"/>  
+
+<xacro:joints name="base_link_link1" type="revolute" par="base_link" child="link1" limit_l="-3.1415" limit_u="3.1415" effort="0.5" velocity="1000.0" 
+                origin="0.0 0.0 0.05" rpy="0.0 0.0 0.0" xyz="0.0 0.0 1.0"/>
+
+<xacro:link_cylinder name="link2" origin_xyz="0.0 0.0 0.425" rpy="0.0 0.0 0.0" radius="0.05" length="0.850" mass="2" ixx="0.4816" ixy="0" ixz="0" 
+                            iyy="0" iyz="0" izz="0.4816" />  
+
+<xacro:joints name="link1_link2" type="revolute" par="link1" child="link2" limit_l="-2.5" limit_u="2.5" effort="0.5" velocity="1000.0" 
+                origin="0.0 0.1 0.268" rpy="0.0 0.0 0.0" xyz="0.0 1.0 0.0"/>
+
+<xacro:link_cylinder name="link3" origin_xyz="0.0 0.0 0.250" rpy="0.0 0.0 0.0" radius="0.05" length="0.500" mass="2" ixx="0.4816" ixy="0" ixz="0" 
+                            iyy="0" iyz="0" izz="0.4816"/>  
+
+<xacro:joints name="link2_link3" type="revolute" par="link2" child="link3" limit_l="-2.5" limit_u="2.5" effort="0.5" velocity="1000.0" 
+                origin="0.0 -0.1 0.850" rpy="0.0 0.0 0.0" xyz="0.0 1.0 0.0"/>
+
+<xacro:link_cylinder name="link4" origin_xyz="0.0 0.0 0.100" rpy="0.0 0.0 0.0" radius="0.05" length="0.200" mass="1" ixx="0.00565" ixy="0" ixz="0" 
+                            iyy="0" iyz="0" izz="0.00565"/>  
+
+<xacro:joints name="link3_link4" type="revolute" par="link3" child="link4" limit_l="-2.5" limit_u="2.5" effort="0.5" velocity="1000.0" 
+                origin="0.0 0.1 0.500" rpy="0.0 0.0 0.0" xyz="0.0 1.0 0.0"/>
+
+<xacro:link_cylinder name="link5" origin_xyz="0.0 0.0 0.03500" rpy="0.0 0.0 0.0" radius="0.05" length="0.17" mass="1" ixx="0.00565" ixy="0" ixz="0" 
+                            iyy="0" iyz="0" izz="0.00565"/>     
+
+<xacro:joints name="link4_link5" type="revolute" par="link4" child="link5" limit_l="-2.5" limit_u="2.5" effort="0.5" velocity="1000.0" 
+                origin="0.0 0.0 0.18" rpy="0.0 1.57 0.0" xyz="1.0 0.0 0.0"/>
+
+    <xacro:link_box name="tcp" origin_xyz="0.0 0.0 0.0125" rpy="0.0 0.0 0.0" size="0.03 0.15 0.03" mass="1" ixx="0.00195" ixy="0" ixz="0" 
+                            iyy="0.00195" iyz="0" izz="0.00015"/>     
+
+<xacro:joints name="link5_tcp" type="revolute" par="link5" child="tcp" limit_l="-2.5" limit_u="2.5" effort="0.5" velocity="1000.0" 
+                origin="0.0 0.0 0.12" rpy="0.0 0.0 0.0" xyz="0.0 0.0 1.0"/>
+
+    <xacro:link_box name="rgripper" origin_xyz="0.0 0.0 0.05" rpy="0.0 0.0 0.0" size="0.01 0.01 0.1" mass="0.5" ixx="0.00042" ixy="0" ixz="0" 
+                            iyy="0.00042" iyz="0" izz="0.0000083"/>  
+
+<xacro:joints name="tcp_rgripper" type="prismatic" par="tcp" child="rgripper" limit_l="0.0" limit_u="0.055" effort="0.5" velocity="1000.0" 
+                origin="0.0 -0.065 0.03" rpy="0.0 0.0 0.0" xyz="0.0 1.0 0.0"/>
+
+    <xacro:link_box name="lgripper" origin_xyz="0.0 0.0 0.05" rpy="0.0 0.0 0.0" size="0.01 0.01 0.1" mass="0.5" ixx="0.00042" ixy="0" ixz="0" 
+                            iyy="0.00042" iyz="0" izz="0.0000083"/>      
+
+ <xacro:joints name="tcp_lgripper" type="prismatic" par="tcp" child="lgripper" limit_l="0.0" limit_u="-0.055" effort="0.5" velocity="1000.0" 
+                origin="0.0 0.065 0.03" rpy="0.0 0.0 0.0" xyz="0.0 1.0 0.0"/>
+</robot>

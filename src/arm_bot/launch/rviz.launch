@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<launch>
+  <param name="robot_description" command="xacro '$(find arm_bot)/urdf/armBot.urdf'"/>
+  
+    <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher"  output="log" respawn="false" respawn_delay="0">
+    
+    </node>
+   <node name="rviz" pkg="rviz" type="rviz"  output="log" respawn="false" respawn_delay="0" args="-d $(find arm_bot)/config/config.rviz">
+   
+   </node>
+   <arg name="use_gui" default="true"/>
+   <node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher"  output="screen" unless="$(arg use_gui)" respawn="false" respawn_delay="0">
+   
+   </node>
+   <node name="joint_state_publisher_gui" pkg="joint_state_publisher_gui" type="joint_state_publisher_gui"  output="screen" if="$(arg use_gui)" respawn="false" respawn_delay="0">
+   
+   </node>
+</launch>

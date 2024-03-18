@@ -2,12 +2,12 @@
 <robot xmlns:xacro="http://www.ros.org/wiki/xacro">
 
     
-<joint name="camera_joint" type="fixed">
+<joint name="camera_depth_joint" type="fixed">
     <parent link="chassis"/>
-    <child link="camera_link"/>
+    <child link="camera_depth_link"/>
     <origin xyz="0.305 0.0 0.08" rpy="0.0 0.0 0.0"/>
 </joint>
-<link name="camera_link">
+<link name="camera_depth_link">
       <visual>
             <geometry>
                <box size="0.010 0.03 0.03"/>
@@ -16,15 +16,15 @@
         </visual>
         
 </link>
-<joint name="camera_opticcal_joint" type="fixed">
-    <parent link="camera_link"/>
-    <child link="camera_optical_link"/>
+<joint name="camera_optical_depth_joint" type="fixed">
+    <parent link="camera_depth_link"/>
+    <child link="camera_optical_depth_link"/>
     <origin xyz="0 0.0 0.0" rpy="${-pi/2} 0.0 ${-pi/2}"/>
 </joint>
-<link name="camera_optical_link">
+<link name="camera_optical_depth_link">
 </link>
 
-<gazebo reference="camera_link">
+<gazebo reference="camera_depth_link">
   <sensor type="depth" name="camera_depth">
   <pose>0 0 0 0 0 0</pose>
       <always_on>true</always_on>
@@ -45,12 +45,12 @@
       </camera>
 
 
- <plugin name="camera_controller" filename="libgazebo_ros_openni_kinect.so">
+ <plugin name="camera_depth_controller" filename="libgazebo_ros_openni_kinect.so">
           <baseline>0.2</baseline>
         <alwaysOn>true</alwaysOn>
         <updateRate>30.0</updateRate>
         <cameraName>camera</cameraName>
-        <frameName>camera_optical_link</frameName>
+        <frameName>camera_optical_depth_link</frameName>
          <imageTopicName>rgb/image_raw</imageTopicName>
         <depthImageTopicName>depth/image_raw</depthImageTopicName>
         <pointCloudTopicName>depth/points</pointCloudTopicName>

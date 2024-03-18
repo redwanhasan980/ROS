@@ -1,0 +1,8 @@
+prefix=/home/redwan/catkin_ws/install
+
+Name: arm_bot
+Description: Description of arm_bot
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 
